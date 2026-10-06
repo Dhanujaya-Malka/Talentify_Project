@@ -1,5 +1,7 @@
 
-// loging page 
+//  switcher
+ // loging page
+
 function switchForm(formType) {
             const wrapper = document.getElementById('formWrapper');
             const loginSec = document.getElementById('loginSection');
@@ -22,13 +24,16 @@ function switchForm(formType) {
             }
         }
 
- function togglePass(inputId, icon) {
-            const inputField = document.getElementById(inputId);
-            if (inputField.type === "password") {
-                inputField.type = "text";
-                icon.classList.replace('fa-eye-slash', 'fa-eye');
-            } else {
-                inputField.type = "password";
-                icon.classList.replace('fa-eye', 'fa-eye-slash');
-            }
-        }
+// Password visibility 
+function togglePass(inputId, icon) {
+    const $inputField = $('#' + inputId);
+    const $icon = $(icon); // $() Query object
+
+    if ($inputField.attr('type') === "password") {
+        $inputField.attr('type', "text");
+        $icon.removeClass('fa-eye-slash').addClass('fa-eye');
+    } else {
+        $inputField.attr('type', "password");
+        $icon.removeClass('fa-eye').addClass('fa-eye-slash');
+    }
+}

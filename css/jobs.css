@@ -1,14 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-}
-
-body {
-  background-color: #f5f7f6;
-  color: #333333;
-}
+/* Global styles are imported from style.css */
 
 /* --- Combined Container Rules --- */
 .hero-container,
@@ -20,6 +10,7 @@ body {
   padding-right: 20px;
 }
 
+/* --- Hero Container --- */
 .hero-container {
   display: flex;
   align-items: center;
@@ -29,27 +20,31 @@ body {
   gap: 50px;
 }
 
+/* --- Jobs Container --- */
 .jobs-container {
   padding-bottom: 60px;
 }
-/* -------------------------------- */
 
+/* ---  Left side Text --- */
 .hero-text-section {
   flex: 2;
 }
 
+/*--- Right side Image ---*/
 .hero-image-section {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
+/* --- Right side Image size --- */
 .hero-image-section img {
   width: 100%;
   max-width: 400px;
   height: auto;
 }
 
+/*--- Main heading ---*/
 .hero-title {
   color: #0c167c;
   font-size: 3rem;
@@ -57,86 +52,106 @@ body {
   margin-bottom: 8px;
 }
 
+/*--- Paragraph below the heading ---*/
 .hero-subtitle {
   color: #474a57;
   font-size: 1.4rem;
   margin-bottom: 35px;
 }
-
+/* --- Search Bar --- */
 .search-bar {
   display: flex;
-  background-color: #ffffff62;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
   border-radius: 50px;
-  padding: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   align-items: center;
   width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+/* --- Search Bar fields --- */
 .search-column {
   display: flex;
   align-items: center;
   flex: 1;
   padding: 0 15px;
-  border-right: 1px solid #dcdde1;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/*--- Remove the right border from the last search column ---*/
 .search-column:last-of-type {
   border-right: none;
 }
 
+/* --- Input and dropdown styling --- */
 .search-column input,
 .search-column select {
   width: 100%;
   border: none;
   background: transparent;
   font-size: 0.95rem;
-  color: #333;
+  color: var(--text-main);
   outline: none;
   padding: 10px 0;
 }
 
+/* --- Add pointer cursor on dropdowns --- */
 .search-column select {
   cursor: pointer;
 }
 
+/* --- Search Button --- */
 .search-button {
-  background-color: #0faaaf;
-  color: white;
+  background-color: var(--primary-accent);
+  color: var(--white);
   border: none;
-  padding: 14px 28px;
+  padding: 14px 35px;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(15, 170, 175, 0.3);
 }
 
+/* --- Hover effect on search button --- */
 .search-button:hover {
-  background-color: #0a7a71;
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 19, 58, 0.2);
 }
 
-/* Fixed the selector to target the correct h2 */
+/* --- Jobs Section title --- */
 .jobs-container h2 {
   font-size: 2rem;
   color: #2c3e50;
   margin-bottom: 30px;
 }
 
+/* --- Job Cards --- */
 .job-card {
-  background: #ffffff;
+  background: var(--white);
   border-radius: 20px;
-  padding: 25px;
+  padding: 30px 25px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+/* --- Hover effect on job cards --- */
 .job-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
+/* --- Top row of job card --- */
 .top-row {
   display: flex;
   justify-content: space-between;
@@ -144,11 +159,13 @@ body {
   margin-bottom: 25px;
 }
 
+/* --- Days left text --- */
 .days {
   font-size: 14px;
   color: #7f8c8d;
 }
 
+/* --- Job type badge --- */
 .job-type {
   background: #e8f5e9;
   color: #00875a;
@@ -158,6 +175,7 @@ body {
   font-weight: 600;
 }
 
+/* --- Company logo --- */
 .job-card img {
   width: 80px;
   height: 80px;
@@ -165,28 +183,38 @@ body {
   margin-bottom: 15px;
 }
 
+/* --- Company name --- */
 .company {
   color: #7f8c8d;
   font-size: 0.95rem;
   margin-bottom: 8px;
 }
 
+/* --- Job title --- */
 .job-card h3 {
   font-size: 1.25rem;
   margin-bottom: 12px;
   color: #2c3e50;
 }
 
+/* --- Location of job --- */
 .location {
   color: #7f8c8d;
   font-size: 0.9rem;
   margin-bottom: 25px;
 }
 
+/* --- Apply button wrapper --- */
+.job-card a {
+  margin-top: auto;
+  text-decoration: none;
+}
+
+/* --- Apply button on jobs card --- */
 .job-card button {
-  background: white;
-  color: #25beda;
-  border: 2px solid #25beda;
+  background: var(--white);
+  color: var(--primary-light);
+  border: 2px solid var(--primary-light);
   padding: 12px 30px;
   border-radius: 30px;
   cursor: pointer;
@@ -196,9 +224,12 @@ body {
   transition: all 0.3s ease;
 }
 
+/* --- Hover effect on apply button --- */
 .job-card button:hover {
-  background: #25beda;
-  color: white;
+  background: var(--primary-light);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 190, 218, 0.3);
 }
 
 /* --- Company logo --- */

@@ -1,60 +1,46 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* Global styles imported from style.css */
+
+.f1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
-body{
-    font-family: Arial, sans-serif;
-}
-
-.head1{
-    height:350px;    
-}
-
+/*Career Connect*/
 .f1 h1{
-    font-size:80px;
-    line-height:1;
-    font-family: Arial;
-    margin-bottom: 60px;
-    font-weight:bold;
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 700;
     text-align: center;
-    color:#f3f3f3;
+    color: var(--white);
+    text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5); 
 }
 
+/*Connecting Talent with Opportunity*/
 .description{
-    font-size:25px;
-    font-family: Centaur, serif;
-    font-weight: bold;
-     text-align: center;
-    color:#000501;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: #e0e0e0;
 }
-
 
 .content{
-    padding:50px;
-    text-align:center;
-   
-}
-.topic1{
-    font-size:50px;
-    font-family: Georgia, serif;
-    font-weight: 600;
+    padding: 50px;
     text-align: center;
-    color:#00133a;
-    margin-top:30px ;
-    margin-bottom:0 ;
-   
 }
 
 .section2{
-    padding:50px;
-    text-align:center;
-    font-size: 20px;
-    font-family:Georgia, serif;
+    padding: 50px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--text-muted);
 }
 
-
+    /*outer container*/
 
 .container {
   display: flex;
@@ -62,44 +48,32 @@ body{
   gap: 40px;
   flex-wrap: wrap;
 }
-
+    /*Vision and Mission Cards*/
 .card {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0,0,0,0.04);
   padding: 40px;
   width: 400px;
-  transition: transform 0.5s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-bottom: 30px;
 }
+    /*Vision and Mission Cards over hover*/
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
-
-.icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
-
-
-
-
 
 .about h2 {
   font-size: 28px;
   margin: 0 0 15px;
-  color: #a30000;
+  color: var(--primary-dark);
 }
-
+/* "Our" in vision and mission */
 .highlight {
-  color: #001f3f;
+  color: var(--primary-accent);
   font-weight: 600;
 }
 
@@ -109,13 +83,8 @@ p {
   font-size: 16px;
 }
 
-.img{
-    display: flex;
-    justify-content:flex-end;
-    width:45%;
-    height:500px;
-    transition: transform 0.3s ease;
-}
+
+    /*inner container1 */
 
 .container1{
     display: flex;
@@ -124,6 +93,7 @@ p {
     gap:40px;
     margin-top: 40px;}
 
+    /*inner container2 */
 
 .container2{
     display: flex;
@@ -132,23 +102,7 @@ p {
     margin-right: 40px;
 }
 
-/* button{
-    background:#52d017;
-    color:white;
-    border:none;
-    padding:15px 50px;
-    border-radius:12px;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:0.3s;
-    margin-left: 50px;
-}
 
-button:hover{
-    background:#3fb312;
-} */
-.hhhh,
 .section2{
     opacity: 0;
     transition: 1s;
@@ -157,6 +111,7 @@ button:hover{
 .show{
     opacity: 1;
 }
+    /*Video content */
 
 .image-container video {
     max-width: 100%; 
@@ -172,5 +127,3 @@ button:hover{
     margin: 0 auto; 
     transform: translateY(-10px);
 }
-
-
