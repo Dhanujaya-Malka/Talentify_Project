@@ -1,4 +1,5 @@
 {
     "explorer.sortOrder": "filesFirst",
-    "explorer.sortOrderReverse": true
+    "explorer.sortOrderReverse": true,
+    "liveServer.settings.port": 5501
 }
