@@ -1,12 +1,16 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>CeyWork</title>
+    <link rel="icon" type="image/png" href="images\logo\logo.png">
 
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 
         <!-- CSS -->
@@ -21,8 +25,14 @@
                 <!-- Navigation Bar Start -->
     <nav class="navbar">
             <div class="container">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    <div class="logo-index" style="display: flex; align-items: center;">
+                        <img src="images/logo/logo.png" alt="CeyWork Logo" style="width: 50px; height: auto;">
+                        <h2 class="logo" style="margin: 0; margin-left: 10px; color: var(--white); font-size: 1.8rem;">CeyWork</h2>
+                    </div>
+                </a>
 
-            <ul>
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="jobs.html">Job Listings</a></li>
                     <li><a href="job-post.html">Post a Job</a></li>
@@ -30,29 +40,25 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul> 
-
-                
-                
             </div>
-                <!-- Navigation Bar End -->
     </nav>
         </header>
 
-        
-        
-                <!-- Search Bar -->
+        <!-- Section of the search bar/ image and text -->
     <div class="hero-container">
-        
+
+            <!-- Text section with heading and small paragraph -->
         <div class="hero-text-section">
         <h1 class="hero-title">Your job search starts here</h1>
         <p class="hero-subtitle">Find the role that’s right for you.</p>
 
+            <!-- Search bar -->
         <form class="search-bar">
             
             <div class="search-column">
             <input type="text" placeholder="I'm looking for..." required>
             </div>
-
+                <!-- job categories lists-->
             <div class="search-column">
             <select required>
                 <option value="" disabled selected>JOB Category</option>
@@ -62,7 +68,7 @@
                 <option value="finance">Finance & Business</option>
             </select>
             </div>
-
+                <!-- job location lists-->
             <div class="search-column">
             <select required>
                 <option value="" disabled selected>Location</option>
@@ -72,24 +78,25 @@
                 <option value="london">Galle</option>
             </select>
             </div>
-
+                <!-- search button -->
             <button type="submit" class="search-button">Search</button>
             
         </form>
         </div>
-
+            <!-- Image on the right side -->
         <div class="hero-image-section">
         <img src="images/banners/jobs image.png" alt="Job Search Illustration">
         </div>
 
     </div>
 
+        <!-- Jobs section starts here -->
     <div class="jobs-container">
     <h2>Featured Jobs</h2>
 
     <div class="row g-4">
 
-        <!-- Card 1 -->
+        <!-- Jobs Card 1 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-13">
                 <div class="top-row">
@@ -104,7 +111,7 @@
             </div>
         </div>
 
-        <!-- Card 2 -->
+        <!-- Jobs Card 2 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-13">
                 <div class="top-row">
@@ -119,7 +126,7 @@
             </div>
         </div>
 
-        <!-- Card 3 -->
+        <!-- Jobs Card 3 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-13">
                 <div class="top-row">
@@ -134,7 +141,7 @@
             </div>
         </div>
 
-        <!-- Card 4 -->
+        <!-- Jobs Card 4 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-28">
                 <div class="top-row">
@@ -149,7 +156,7 @@
             </div>
         </div>
 
-        <!-- Card 5 -->
+        <!-- Jobs Card 5 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-19">
                 <div class="top-row">
@@ -164,7 +171,7 @@
             </div>
         </div>
 
-        <!-- Card 6 -->
+        <!-- Jobs Card 6 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-05">
                 <div class="top-row">
@@ -179,7 +186,7 @@
             </div>
         </div>
 
-        <!-- Card 7 -->
+        <!-- Jobs Card 7 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-24">
                 <div class="top-row">
@@ -194,7 +201,7 @@
             </div>
         </div>
 
-        <!-- Card 8 -->
+        <!-- Jobs Card 8 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-26">
                 <div class="top-row">
@@ -209,7 +216,7 @@
             </div>
         </div>
 
-        <!-- Card 9 -->
+        <!-- Jobs Card 9 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-14">
                 <div class="top-row">
@@ -224,7 +231,7 @@
             </div>
         </div>
 
-        <!-- Card 10 -->
+        <!-- Jobs Card 10 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-22">
                 <div class="top-row">
@@ -239,7 +246,7 @@
             </div>
         </div>
 
-        <!-- Card 11 -->
+        <!-- Jobs Card 11 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-29">
                 <div class="top-row">
@@ -254,7 +261,7 @@
             </div>
         </div>
 
-        <!-- Card 12 -->
+        <!-- Jobs Card 12 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-02">
                 <div class="top-row">
@@ -269,7 +276,7 @@
             </div>
         </div>
 
-        <!-- Card 13 -->
+        <!-- Jobs Card 13 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-09">
                 <div class="top-row">
@@ -284,7 +291,7 @@
             </div>
         </div>
 
-        <!-- Card 14 -->
+        <!-- Jobs Card 14 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-18">
                 <div class="top-row">
@@ -299,7 +306,7 @@
             </div>
         </div>
 
-        <!-- Card 15 -->
+        <!-- Jobs Card 15 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-04">
                 <div class="top-row">
@@ -314,7 +321,7 @@
             </div>
         </div>
 
-        <!-- Card 16 -->
+        <!-- Jobs Card 16 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-21">
                 <div class="top-row">
@@ -329,7 +336,7 @@
             </div>
         </div>
 
-        <!-- Card 17 -->
+        <!-- Jobs Card 17 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-25">
                 <div class="top-row">
@@ -344,7 +351,7 @@
             </div>
         </div>
 
-        <!-- Card 18 -->
+        <!-- Jobs Card 18 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-30">
                 <div class="top-row">
@@ -359,7 +366,7 @@
             </div>
         </div>
 
-        <!-- Card 19 -->
+        <!-- Jobs Card 19 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-17">
                 <div class="top-row">
@@ -374,7 +381,7 @@
             </div>
         </div>
 
-        <!-- Card 20 -->
+        <!-- Jobs Card 20 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-06">
                 <div class="top-row">
@@ -389,7 +396,7 @@
             </div>
         </div>
 
-        <!-- Card 21 -->
+        <!-- Jobs Card 21 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-23">
                 <div class="top-row">
@@ -404,7 +411,7 @@
             </div>
         </div>
 
-        <!-- Card 22 -->
+        <!-- Jobs Card 22 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-27">
                 <div class="top-row">
@@ -419,7 +426,7 @@
             </div>
         </div>
 
-        <!-- Card 23 -->
+        <!-- Jobs Card 23 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-11">
                 <div class="top-row">
@@ -434,7 +441,7 @@
             </div>
         </div>
 
-        <!-- Card 24 -->
+        <!-- Jobs Card 24 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-06-20">
                 <div class="top-row">
@@ -449,7 +456,7 @@
             </div>
         </div>
 
-        <!-- Card 25 -->
+        <!-- Jobs Card 25 -->
         <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
             <div class="job-card" data-deadline="2026-07-01">
                 <div class="top-row">

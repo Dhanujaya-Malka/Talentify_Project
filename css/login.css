@@ -1,55 +1,27 @@
-/* --- Global Overrides for Login Page --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    position: relative;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-header.hero-section {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    display: block;
-}
-
-nav.navbar {
-    padding-top: 25px !important;
-    padding-bottom: 25px !important;
-}
+/* Global styles imported from style.css */
 
 .login-bg-container {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    background-image: url('../images/banners/grey.jpeg'); /* Adjusted path assuming css/ folder */
+    background-image: url('../images/banners/grey.jpeg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 80vh;
-    padding: 40px 0;
-    max-width: 100% !important;
-}
-
-footer {
-    display: block;
-    width: 100%;
-    margin-top: 0 !important;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* --- Form Container & Tabs --- */
 .form-container-card {
-    background-color: white;
+    background-color: var(--white);
     width: 100%;
     max-width: 450px; 
-    border-radius: 12px;
-    box-shadow: 0 10px 30px lightgray;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: max-width 0.4s ease-in-out; 
-    border: 1px solid whitesmoke;
+    transition: max-width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .form-container-card.register-mode {
@@ -58,60 +30,68 @@ footer {
 
 .form-navigation-tabs {
     display: flex;
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .nav-tab {
     flex: 1;
     text-align: center;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 18px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    color: slategray;
-    background-color: white;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: var(--text-muted);
+    background-color: #f8f9fa;
+    transition: var(--transition-speed);
 }
 
 .nav-tab.active {
-    background-color: #00133a;
-    color: white;
+    background-color: var(--primary-dark);
+    color: var(--white);
 }
 
 /* --- Form Content --- */
 .form-content-area {
-    padding: 30px 40px;
+    padding: 40px;
 }
 
 .form-main-title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #00133a;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 25px;
 }
 
 .input-block {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .custom-input, 
 .input-block input {
     width: 100%;
-    padding: 12px 15px;
-    background-color: whitesmoke;
-    border: none;
-    border-radius: 6px;
+    padding: 14px 18px;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 10px;
     outline: none;
+    font-size: 1rem;
+    transition: var(--transition-speed);
+}
+
+.custom-input:focus, 
+.input-block input:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 4px rgba(15, 170, 175, 0.1);
 }
 
 .toggle-icon {
     position: absolute;
-    right: 15px;
+    right: 18px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    color: slategray;
+    color: var(--text-muted);
 }
 
 /* --- Action Rows & Buttons --- */
@@ -119,72 +99,79 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .small-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #00133a;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
 }
 
 .btn-solid-green {
     width: 100%;
-    background-color: limegreen;
-    color: white;
+    background-color: var(--primary-accent);
+    color: var(--white);
     border: none;
-    padding: 12px;
-    font-weight: bold;
-    border-radius: 6px;
-    text-transform: uppercase;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--transition-speed);
 }
 
 .btn-solid-green:hover {
-    background-color: green;
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 19, 58, 0.2);
 }
 
 .btn-outline-blue {
     background: transparent;
-    border: 2px solid deepskyblue;
-    color: deepskyblue;
-    padding: 5px 15px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 12px;
+    border: 2px solid var(--primary-light);
+    color: var(--primary-light);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition-speed);
 }
 
 .btn-outline-blue:hover {
-    background-color: deepskyblue;
-    color: white;
+    background-color: var(--primary-light);
+    color: var(--white);
 }
 
 /* --- Utilities & Upload Box --- */
 .cv-upload-box {
-    background-color: whitesmoke;
-    padding: 12px 15px;
-    border-radius: 6px;
-    color: slategray;
+    background-color: #f8f9fa;
+    padding: 14px 18px;
+    border-radius: 10px;
+    color: var(--text-main);
+    border: 1px dashed rgba(0,0,0,0.1);
 }
 
 .upload-info {
-    font-size: 11px;
-    color: slategray;
-    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 8px;
 }
 
 .switch-text {
     text-align: center;
-    font-size: 14px;
-    color: slategray;
-    margin-top: 15px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 25px;
 }
 
 .switch-text a {
-    color: #00133a;
-    font-weight: bold;
+    color: var(--primary-accent);
+    font-weight: 600;
     text-decoration: none;
+    transition: var(--transition-speed);
+}
+.switch-text a:hover {
+    color: var(--primary-dark);
 }

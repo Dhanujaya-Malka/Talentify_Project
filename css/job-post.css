@@ -102,123 +102,104 @@
 #Jobform {
   display: flex;
   flex-direction: column; 
-  gap: 15px;              
-  max-width: 550px;      
+  gap: 20px;              
+  max-width: 600px;      
   margin: 0 auto; 
-  color: #000000;
+  color: var(--text-main);
 }
-          /* Centers the form */
 
 .job-form-container{
-    /* background-image: url('../images/jobimages/job.jpeg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
     width: 100%;
     min-height: 100vh;
-    margin-top: 0;
-    
+    padding: 60px 20px;
+    display: flex;
     justify-content: center; 
     align-items: center; 
 }
-    
 
 .form-box{
-    margin-left: auto;
-    margin-right: auto;
     position: relative;
-    width: 90%;
-    max-width: 800px;
-    backdrop-filter: blur(25px);
-    border: 2px solid white;
-    border-radius: 15px;
-    padding: 50px;
-    color: black;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2)
-}
-.form-header{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 220px;
-    height: 80px;
-    border-radius: 0 0 20px 20px;
-}
-.form-header span{
-    font-size: 40px;
-    color:  #000000;
-    font-family: CG Omega;
-    font-weight: 200px;
-    
-    
-}
-input, select, textarea {
-  /*padding: 10px;
-  width: 100%;
-  border-radius: 15px;
-  width: 100%;
-  font-size: 15px;
-  background: transparent;
-  color: beige;
-  padding-inline: 20px 50px;
-  border: 2px solid white;
-  outline: none;*/
     width: 100%;
-    padding: 18px 25px;
-    border-radius: 50px;
-    border: 2px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.1);
-    color: black;
-    font-size: 17px;
+    max-width: 800px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.form-header{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header span{
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.form-box input, .form-box select, .form-box textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #f8f9fa;
+    color: var(--text-main);
+    font-size: 1rem;
     outline: none;
-    transition: .4s;
+    transition: var(--transition-speed);
 }
-input:focus,
-select:focus,
-textarea:focus{
-    border-color: #6d8fa3;
-    box-shadow: 0 0 15px #6d8fa3;
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus{
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 4px rgba(15, 170, 175, 0.1);
 }
+
 .btn-submit{
-    display:inline-block;
-    text-decoration:none;
-    background:white;
-    color: black;
-    padding:18px 35px;
-    border-radius:5px;
-    font-weight:bold;
-    font-size:18px;
-    transition:0.3s;
-    
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background: var(--primary-accent);
+    color: var(--white);
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition-speed);
+    border: none;
+    cursor: pointer;
 }
+
 .btn-submit:hover{
-    transform: translateY(-5px);
-    background:#00133a;
-    color: white;
+    transform: translateY(-2px);
+    background: var(--primary-dark);
+    box-shadow: 0 5px 15px rgba(0, 19, 58, 0.2);
 }
 
 ::placeholder{
-    color: black;
-    font-weight: 500;
-}
-#Jobform label{
-    font-size: 20px;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-.job-form-container h1{
-     font-size: 60px;
-    text-align: center;
-    color: white;
-    margin-bottom: 40px;
-    
+    color: var(--text-muted);
 }
 
+#Jobform label{
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.job-form-container h1{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+    font-weight: 700;
+}

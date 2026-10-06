@@ -1,0 +1,41 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        header.hero-section {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            display: block;
+        }
+        
+        nav.navbar {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        
+        .container.d-flex {
+            margin-top: 0 ;
+            margin-bottom: 0;
+            background-image: url('images/banners/grey.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 80vh;
+            padding: 40px 0;
+            max-width: 100%;
+        }
+        
+        footer {
+            display: block;
+            width: 100%;
+            margin-top: 0;
+        }
